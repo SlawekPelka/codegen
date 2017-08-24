@@ -3,9 +3,9 @@
     "version": "2.1.0",
     "description": "",
     "scripts": {
-        "start": "webpack --optimize-minimize && npm run serve",
+        "start": "webpack --optimize-minimize --watch",
         "tsc:watch": "tsc -w",
-        "serve": "webpack-dev-server --optimize-minimize"
+        "serve": "webpack-dev-server --optimize-minimize --output-public-path=/build/"
     },
     "author": "marcin.baraniecki@softwaremill",
     "license": "ISC",
