@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/lib/handler.ts',
+    entry: './src/lib/main.ts',
     module: {
         rules: [{
             test: /\.ts?$/,
