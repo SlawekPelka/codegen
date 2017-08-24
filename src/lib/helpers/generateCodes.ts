@@ -21,7 +21,7 @@ export default class gencodes {
 
     private gen() {
 
-        for (let i: number = 0; i < Number(this.times); i++) {
+        for (let i: number = 0; i < Number(this.times) ; i++) {
             this.codeArr.push(`${this.source}-${this.getLetter()}${this.getNumber()}${this.getLetter()}-${this.getNumber()}${this.getLetter()}${this.getLetter()}`);
         }
 
