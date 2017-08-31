@@ -20,7 +20,6 @@ export default class gencodes {
     }
 
     private gen() {
-
         if (Math.round(Number(this.times)) >= this.batchSize) {
             this.times = Math.max(Math.round(Number(this.times)) / this.batchSize);
         } else {
