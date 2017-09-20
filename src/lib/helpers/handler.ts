@@ -28,8 +28,8 @@ export default class Handler {
     }
 
     private splitInput() {
-        let splFiliaal: string = this.filiaal.value.split(',');
-        let splXtimes: string = this.xtimes.value.split(',');
+        let splFiliaal: string = this.filiaal.value.replace(/\n/g, "").split(',');
+        let splXtimes: string = this.xtimes.value.replace(/\n/g, "").split(',');
 
         this.filiaal = splFiliaal;
         this.xtimes = splXtimes;

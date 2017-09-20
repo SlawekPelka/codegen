@@ -51,7 +51,6 @@ export default class gencodes {
             for (let i: number = 0; i < this.times ; i++) {
                 this.codeArr.push(`${this.source}-${this.createPartial()}-${this.createPartial()}`);
             }
-            console.log(batchCount);
         }
     }
 
