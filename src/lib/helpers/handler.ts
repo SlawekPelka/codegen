@@ -64,7 +64,17 @@ export default class Handler {
         let difference: number = Math.max(this.totalCodes - uniqueCount);
         console.log({name: filiaalName, expected: this.totalCodes, uniqueCount, difference});
 
-        if (difference != 0) {
+        if (difference < 0) {
+            let tooMuch: number = Math.max(uniqueCount - this.totalCodes);
+            console.log(`u-oh overflow... removing last ${tooMuch} items`);
+
+            for (let i: number = 0; i < tooMuch; i++) {
+                let idx = codes.reverse().indexOf(codes.reverse()[i]);
+                codes.reverse().splice(idx, 1);
+            }
+        }
+
+        if (difference > 0) {
             let newCodes = new gencodes(filiaalName, difference);
             for (let i:number = 0; i < newCodes.codes().length; i++) {
                 codes.push(newCodes.codes()[i]);
